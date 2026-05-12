@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "@influxdata/influxdb-client": "^1.33.2",
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0"
   }
 }

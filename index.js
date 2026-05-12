@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { getPM25Average } = require('./influx');
 const { sendMessage } = require('./telegram');
 const config = require('./config');

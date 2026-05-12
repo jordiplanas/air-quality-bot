@@ -12,8 +12,8 @@ async function getPM25Average() {
   const fluxQuery = `
     from(bucket: "${config.influx.bucket}")
       |> range(start: -10m)
-      |> filter(fn: (r) => r._measurement == "air_quality")
-      |> filter(fn: (r) => r._field == "pm25")
+      |> filter(fn: (r) => r._measurement == "ESP32_weather_station")
+      |> filter(fn: (r) => r._field == "PM 25")
       |> mean()
   `;
 
