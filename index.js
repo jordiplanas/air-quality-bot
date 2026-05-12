@@ -12,31 +12,31 @@ async function run() {
       return;
     }
 
-    console.log("PM2.5 media 10min:", pm25);
+    console.log("PM2.5 mitjana dels darrers 10 min:", pm25);
 
     let message = null;
 
     if (pm25 > config.alert.critical) {
       message = `
-🚨 Contaminación MUY alta
+🚨 Contaminació MOLT alta
 
-PM2.5 (media 10 min): ${pm25.toFixed(1)} µg/m³
+PM2.5 (mitjana dels darrers 10 min): ${pm25.toFixed(1)} µg/m³
 
-⛔ Evita salir o hacer ejercicio
+⛔ Evita sortir o fer exercici
 `;
     }
     else if (pm25 > config.alert.danger) {
       message = `
-⚠️ Contaminación alta
+⚠️ Contaminació alta
 
-PM2.5 (media 10 min): ${pm25.toFixed(1)} µg/m³
+PM2.5 (mitjana dels darrers 10 min): ${pm25.toFixed(1)} µg/m³
 
-⚠️ Evita actividad intensa
+⚠️ Evita activitat intensa
 `;
     }
     else if (pm25 > config.alert.warning) {
       message = `
-🟡 Calidad del aire mejorable
+🟡 Qualitat de l'aire millorable
 
 PM2.5: ${pm25.toFixed(1)} µg/m³
 `;
